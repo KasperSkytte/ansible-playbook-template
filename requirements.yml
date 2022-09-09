@@ -1,3 +1,0 @@
-#- src: git+git@github.com:kasperskytte/ansible-role-example.git
-#  version: v1.0.0
-#  path: roles/

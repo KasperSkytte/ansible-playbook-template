@@ -16,12 +16,12 @@ host_vars/                # host-specific variables
 roles/                    # all ansible roles should be in here
 (optional)
 
-log/                      # Ansible execution log
+log/ansible.log           # Ansible execution log
 tests/                    # playbook tests
 
 playbook.yml              # main playbook
 README.md
-requirements.yml          # role dependencies
+roles/requirements.yml    # file with required roles to install
 ````
 
 ## Usage
@@ -54,7 +54,7 @@ To create new roles you can use the following command in a terminal:
 
 This will create a role folder structure for you to use.
 
-If you prefer, you can add the roles of the project in the ```requirements.yml``` file.
+If you prefer, you can add the roles of the project in the ```roles/requirements.yml``` file.
 
 Ansible best practices can be read here: http://docs.ansible.com/playbooks_best_practices.html
 
@@ -66,7 +66,7 @@ and install ansible and ansible-galaxy roles in there automatically first, or ma
 Install the dependencies:
 
 ```
- $ ansible-galaxy install -r requirements.yml -p roles/
+ $ ansible-galaxy install -r roles/requirements.yml -p roles/
 ```
 
 Execute the Playbook.
